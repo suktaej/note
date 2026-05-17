@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Unreal Engine](README.md)
+* [Commit message convention](README.md)
