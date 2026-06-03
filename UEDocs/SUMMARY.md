@@ -1,5 +1,6 @@
 # Table of contents
 
-* [SubSystem](README.md)
+* [README](README.md)
+* [SubSystem](<README (1).md>)
 * [Enhanced Input](enhanced-input.md)
 * [VR Settings](vr-settings.md)
