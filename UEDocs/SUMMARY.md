@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [Timer](timer.md)
 * [Debug Geometry](debug-geometry.md)
 * [SubSystem](subsystem.md)
 * [GameInstance](gameinstance.md)
