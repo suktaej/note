@@ -57,6 +57,21 @@ DrawDebugSphere(
 	);
 ```
 
+## Coordinate
+
+```cpp
+DrawDebugCoordinateSystem(
+    GetWorld(),             // UWorld 포인터
+    Location,               // 좌표계가 그려질 위치 (FVector)
+    Rotation,               // 좌표계의 회전값 (FRotator)
+    Scale,                  // 축의 길이 (float)
+    bPersistentLines,       // 영구 표시 여부 (bool, true면 사라지지 않음)
+    LifeTime,               // 표시될 시간 (float, 초 단위)
+    DepthPriority,          // 렌더링 깊이 우선순위 (uint8)
+    Thickness               // 선의 두께 (float)
+);
+```
+
 ## FPredictProjectilePathParams
 
 UGameplayStatics::PredictProjectilePath() 함수로 전달하는 설정 구조체
