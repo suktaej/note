@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [Debug Geometry](debug-geometry.md)
 * [SubSystem](subsystem.md)
 * [GameInstance](gameinstance.md)
 * [Movement Component](movement-component/README.md)
