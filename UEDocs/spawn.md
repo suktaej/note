@@ -1,5 +1,49 @@
 # Spawn
 
+## SpawnActor()
+
+생성 및 초기화를 함께 진행
+
+```cpp
+AMyActor* Actor = World->SpawnActor<AMyActor>(
+    AMyActor::StaticClass(),
+    Transform,
+    Params);    // FActorSpawnParameters 참고
+```
+
+실행 순서는 생성자(Constructor) -> 컴포넌트 생성 -> OnConstruction() -> BeginPlay()
+
+그러므로 SpawnActor()가 반환될 때 이미 Actor가 월드에 등록되어 있음.
+
+## SpawnActorDeferred()
+
+생성을 연기
+
+```cpp
+AMyActor* Actor =
+    World->SpawnActorDeferred<AMyActor>(
+        AMyActor::StaticClass(),
+        Transform);
+```
+
+이 시점에서 Actor가 Spawn된 것이 아님.
+
+이후 필요한 정보들을 먼저 작성할 수 있음.
+
+```
+Actor->SetSource(...);
+Actor->SetData(...);
+Actor->SetScale(...);
+```
+
+이후 FinishSpawning함수 호출 시 Spawn 완료
+
+```cpp
+Actor->FinishSpawning(Transform);
+```
+
+실행 순서는 생성자 -> SpawnActorDeferred 반환 -> 데이터 직접 설정 -> FinishSpawning -> OnConstruction() -> BeginPlay()
+
 ## FActorSpawnParameters
 
 `SpawnActor()` 또는 `SpawnActorDeferred()`가 Actor를 생성할 때의 동작을 제어하는 옵션 구조체
@@ -58,4 +102,3 @@ Params.Template = SomeActor;
 ```
 
 기존 Actor를 복사해서 생성 (사용빈도 낮음)
-
