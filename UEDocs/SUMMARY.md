@@ -10,5 +10,6 @@
 * [Enhanced Input](enhanced-input.md)
 * [VR Settings](vr-settings.md)
 * [Spawn](spawn.md)
+* [Scalability](scalability.md)
 * [Collision](collision/README.md)
   * [Delegate](collision/delegate.md)
