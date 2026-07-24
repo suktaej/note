@@ -1,6 +1,7 @@
 # Table of contents
 
-* [PrimitiveComponent Overlap Delegate](README.md)
+* [README](README.md)
+* [PrimitiveComponent Overlap Delegate](primitivecomponent-overlap-delegate.md)
 * [Timer](timer.md)
 * [Debug Geometry](debug-geometry.md)
 * [SubSystem](subsystem.md)
